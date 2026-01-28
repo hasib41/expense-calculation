@@ -191,7 +191,8 @@ router.get('/stats/summary', async (_req: Request, res: Response) => {
 
         const categoryBreakdown: Record<string, number> = {};
         categoryData?.forEach((exp) => {
-            const catName = (exp.category as { name: string })?.name || 'Uncategorized';
+            const category = exp.category as unknown as { name: string } | null;
+            const catName = category?.name || 'Uncategorized';
             categoryBreakdown[catName] = (categoryBreakdown[catName] || 0) + Number(exp.amount);
         });
 
