@@ -6,8 +6,12 @@ import FilterPanel from './components/FilterPanel';
 import ExpenseList from './components/ExpenseList';
 import ExpenseForm from './components/ExpenseForm';
 import CategoryManager from './components/CategoryManager';
+import Login from './components/Login';
 
 function App() {
+    const [isAuthenticated, setIsAuthenticated] = useState(() => {
+        return sessionStorage.getItem('isLoggedIn') === 'true';
+    });
     const [expenses, setExpenses] = useState<Expense[]>([]);
     const [categories, setCategories] = useState<Category[]>([]);
     const [stats, setStats] = useState<ExpenseStats | null>(null);
@@ -108,6 +112,11 @@ function App() {
             console.error('Failed to delete category:', error);
         }
     };
+
+    // Show login screen if not authenticated
+    if (!isAuthenticated) {
+        return <Login onLogin={() => setIsAuthenticated(true)} />;
+    }
 
     return (
         <div className="min-h-screen bg-slate-50">
