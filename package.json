@@ -1,0 +1,24 @@
+{
+  "name": "expense-calculations",
+  "version": "1.0.0",
+  "description": "A simple, clean expense tracking application built with modern technologies for managing software company expenses.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasib41/expense-calculation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hasib41/expense-calculation/issues"
+  },
+  "homepage": "https://github.com/hasib41/expense-calculation#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.93.2",
+    "@vercel/node": "^5.5.28"
+  }
+}
