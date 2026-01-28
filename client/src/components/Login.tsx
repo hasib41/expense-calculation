@@ -5,7 +5,7 @@ interface LoginProps {
 }
 
 // Password is stored in environment variable for security
-const APP_PASSWORD = (import.meta as unknown as { env: Record<string, string> }).env.VITE_APP_PASSWORD || 'expense123';
+const APP_PASSWORD = import.meta.env.VITE_APP_PASSWORD || 'expense123';
 
 export default function Login({ onLogin }: LoginProps) {
     const [password, setPassword] = useState('');
