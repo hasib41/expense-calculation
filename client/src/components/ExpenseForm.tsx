@@ -92,7 +92,7 @@ export default function ExpenseForm({ expense, categories, onSubmit, onClose }: 
                             Amount <span className="text-red-500">*</span>
                         </label>
                         <div className="relative">
-                            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">$</span>
+                            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">৳</span>
                             <input
                                 type="number"
                                 step="0.01"

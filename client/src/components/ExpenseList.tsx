@@ -9,9 +9,9 @@ interface ExpenseListProps {
 
 export default function ExpenseList({ expenses, loading, onEdit, onDelete }: ExpenseListProps) {
     const formatCurrency = (amount: number) => {
-        return new Intl.NumberFormat('en-US', {
+        return new Intl.NumberFormat('en-BD', {
             style: 'currency',
-            currency: 'USD',
+            currency: 'BDT',
         }).format(amount);
     };
 
